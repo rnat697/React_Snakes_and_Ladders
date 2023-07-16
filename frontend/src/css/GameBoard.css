@@ -1,0 +1,10 @@
+.renderBoard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.td {
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: bottom right, left, right;
+}

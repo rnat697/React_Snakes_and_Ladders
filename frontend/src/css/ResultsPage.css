@@ -1,0 +1,160 @@
+.results-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #4b5683;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.bubbles-animation {
+  width: 100%;
+  animation-name: float-up;
+  animation-duration: 2s;
+  position: absolute;
+  top: -20%;
+  z-index: 1;
+}
+
+@keyframes float-up {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+  5% {
+    transform: translate3d(0, 95%, 0);
+  }
+  10% {
+    transform: translate3d(0, 90%, 0);
+  }
+  15% {
+    transform: translate3d(0, 85%, 0);
+  }
+  20% {
+    transform: translate3d(0, 80%, 0);
+  }
+  25% {
+    transform: translate3d(0, 75%, 0);
+  }
+  30% {
+    transform: translate3d(0, 70%, 0);
+  }
+  35% {
+    transform: translate3d(0, 65%, 0);
+  }
+  40% {
+    transform: translate3d(0, 60%, 0);
+  }
+  45% {
+    transform: translate3d(0, 55%, 0);
+  }
+  50% {
+    transform: translate3d(0, 50%, 0);
+  }
+  55% {
+    transform: translate3d(0, 45%, 0);
+  }
+  60% {
+    transform: translate3d(0, 40%, 0);
+  }
+  65% {
+    transform: translate3d(0, 35%, 0);
+  }
+  70% {
+    transform: translate3d(0, 30%, 0);
+  }
+  75% {
+    transform: translate3d(0, 25%, 0);
+  }
+  80% {
+    transform: translate3d(0, 20%, 0);
+  }
+  85% {
+    transform: translate3d(0, 15%, 0);
+  }
+  90% {
+    transform: translate3d(0, 10%, 0);
+  }
+  95% {
+    transform: translate3d(0, 5%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.results-content {
+  height: 100%;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.winner-tag {
+  color: #f7da86;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  padding-top: 110px;
+  text-transform: uppercase;
+}
+
+.winner-player-tag {
+  color: white;
+  font-size: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.winner-player-image-div {
+  position: absolute;
+  top: 15vh;
+  height: 30vh;
+  width: 30vh;
+  background-color: #f7da86;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  box-shadow: -1px -1px 10px 1px white, 1px 1px 10px 1px white;
+}
+
+.winner-player-image {
+  height: 15vh;
+}
+
+.podium {
+  height: 100vh;
+  width: 100vh;
+  border-radius: 50%;
+  background-color: #4b5683;
+  position: absolute;
+  bottom: -50vh;
+  z-index: 1;
+  background-image: url(../assets/Bubble2.png);
+  background-size: cover;
+}
+
+.seaweed {
+  position: absolute;
+  width: 110vh;
+  bottom: -5%;
+  z-index: 2;
+}
+
+.results-page .next-btn {
+  background-image: url("../assets/home.png");
+  background-color: white;
+}

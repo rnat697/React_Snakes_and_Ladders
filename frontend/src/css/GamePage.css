@@ -1,0 +1,567 @@
+.game-page {
+  width: 100%;
+  height: 100vh;
+  background-color: #a5accd;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-page-content {
+  display: flex;
+}
+
+/* ------------ LEFT SIDE CONTAINER ---------- */
+.div-1 {
+  width: 35%;
+  margin: 50px 50px 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 20px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-players {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-player-tag {
+  width: 70%;
+  height: fit-content;
+  color: #F7DA86;
+  background-color: #4B5683;
+  border-radius: 20px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.current-player {
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  border: 5px solid #4b5683;
+  border-radius: 50%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-player-image {
+  width: 80px;
+}
+
+.next-player {
+  height: 80px;
+  width: 80px;
+  background-color: white;
+  border: 2px solid #4b5683;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 25px;
+}
+
+.next-player-image {
+  width: 40px;
+}
+
+/* SWIM BUTTON */
+
+.swim-btn {
+  background-repeat: repeat;
+  background-size: contain;
+  background-image: url(../assets/Bubble2.png);
+  width: 100%;
+  line-height: 20px;
+  min-height: 40px;
+  color: #4b5683;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 5px;
+  border: solid white 2px;
+  display: block;
+  font-weight: bold;
+}
+
+.swim-btn:hover {
+  filter: brightness(100%);
+  background-color: #4b5683;
+  color: white;
+  border: solid white 2px;
+}
+
+.swim-btn:disabled {
+  opacity: 0;
+  cursor: context-menu;
+}
+
+.swim-btn:hover:disabled {
+  cursor: context-menu;
+}
+
+/* ROLL DICE */
+
+.roll-dice {
+  display: flex;
+  flex-flow: column nowrap;
+  border: none;
+  width: 100%;
+}
+
+/* Shows each dice in one row */
+.roll-dice-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: none;
+  width: 100%;
+}
+
+/* Styling roll-dice button */
+.roll-dice button {
+  height: fit-content;
+  width: 100%;
+  line-height: 20px;
+  color: #4b5683;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #f7da86;
+  border-radius: 20px;
+  padding: 5px;
+  display: block;
+  border: 2px solid #4B5683;
+  font-weight: bold;
+}
+
+/* Setting hover effect on button */
+.roll-dice button:hover {
+  cursor: pointer;
+}
+
+/* Styling roll-dice button */
+.roll-dice button:disabled {
+  opacity: 0;
+  cursor: context-menu;
+}
+
+/* Setting hover effect on button */
+.roll-dice button:hover:disabled {
+  cursor: context-menu;
+}
+
+.roll-dice-rolling {
+  height: fit-content;
+  color: #4b5683;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #a5accd !important;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+/* ------------ GAME BOARD ---------- */
+
+.div-2 {
+  width: 60%;
+  height: fit-content;
+  margin: 30px 0px 20px 20px;
+  overflow: auto;
+  display: flex;
+  padding: 7px;
+  justify-content: center;
+  background-image: url("../assets/game_board.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-radius: 15px;
+  padding: 7px;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+td {
+  width: calc(100% / 10);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  padding-bottom: calc(100% / 10);
+}
+
+table td {
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+table td::before {
+  content: "";
+  display: block;
+}
+
+/* ------------ RIGHT HAND BUTTONS ---------- */
+
+.div-3 {
+  width: 10%;
+  height: fit-content;
+  padding: 45px 0 45px 50px;
+}
+
+.pop-up-button {
+  min-height: 80px;
+  max-height: 80px;
+  min-width: 80px;
+  max-width: 80px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 5px 0 5px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+.pop-up-button:hover {
+  filter: brightness(50%);
+  border: 3px solid #4b5683;
+}
+
+.div-3 button:focus {
+  outline: none;
+  border: none;
+}
+
+.home {
+  background-image: url("../assets/home.png");
+}
+
+.settings {
+  background-image: url("../assets/settings.png");
+}
+
+.tutorial {
+  background-image: url("../assets/tutorial.png");
+}
+
+.white-bgr {
+  background-color: white;
+}
+
+.gold-dark-bgr {
+  background-color: #f7da86;
+}
+
+.purple-light-bgr {
+  background-color: #7f89b4;
+}
+
+.justify-right {
+  display: flex;
+  justify-content: right;
+}
+
+.justify-left {
+  display: flex;
+  justify-content: left;
+}
+
+.sound {
+  background-image: url("../assets/sound_on.png");
+}
+
+.sound:active,
+.active {
+  background-image: url("../assets/sound_off.png");
+}
+
+@media screen and (max-width: 1300px) {
+  .div-1,
+  .div-2 {
+    margin: 20px;
+  }
+
+  .div-3 {
+    margin: 20px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .div-1,
+  .div-2 {
+    margin: 20px;
+  }
+
+  .div-3 {
+    margin: 20px;
+    padding: 0;
+  }
+
+  .div-players {
+    margin: 15px 0 15px 0;
+  }
+
+  .current-player {
+    height: 100px;
+    width: 100px;
+  }
+
+  .current-player-image {
+    width: 50px;
+  }
+
+  .next-player {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 0 0 15px;
+  }
+
+  .next-player-image {
+    width: 20px;
+  }
+}
+
+/* ------------ BUBBLES/SEAWEED POP UP ---------- */
+.seaweed-bubbles-pop-up {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 150px;
+  z-index: 2;
+  padding: 20px;
+  background-color: #4b5683;
+  border-radius: 20px;
+  border: 3px solid white;
+}
+
+.seaweed-bubbles-pop-up-inner {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  z-index: 2;
+}
+
+.seaweed-bubbles-pop-up p {
+  margin-block-start: 0;
+  margin-block-end: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+.continue-button {
+  border-radius: 50px;
+  font-size: 20px;
+  align-items: center;
+  background-color: #7f89b4;
+  border: 0;
+  color: white;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  justify-content: center;
+  line-height: 20px;
+  min-height: 50px;
+  min-width: 100px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 20px;
+  vertical-align: middle;
+  margin: 10px;
+  text-transform: uppercase;
+  border: solid #4b5683 2px;
+}
+
+.continue-button:hover {
+  filter: brightness(100%);
+  background-color: #f7da86;
+  color: #4b5683;
+  border: solid white 2px;
+}
+
+.bubbles-popup-animation {
+  display: none;
+  width: 100%;
+  animation-name: float-up;
+  animation-duration: 1s;
+  position: absolute;
+  top: -100%;
+  z-index: 1;
+}
+
+.seaweed-popup-animation {
+  display: none;
+  width: 100%;
+  animation-name: slide-down;
+  animation-duration: 1.5s;
+  position: absolute;
+  bottom: -100%;
+  z-index: 1;
+}
+
+@keyframes float-up {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+  5% {
+    transform: translate3d(0, 90%, 0);
+  }
+  10% {
+    transform: translate3d(0, 80%, 0);
+  }
+  15% {
+    transform: translate3d(0, 70%, 0);
+  }
+  20% {
+    transform: translate3d(0, 60%, 0);
+  }
+  25% {
+    transform: translate3d(0, 50%, 0);
+  }
+  30% {
+    transform: translate3d(0, 40%, 0);
+  }
+  35% {
+    transform: translate3d(0, 30%, 0);
+  }
+  40% {
+    transform: translate3d(0, 20%, 0);
+  }
+  45% {
+    transform: translate3d(0, 10%, 0);
+  }
+  50% {
+    transform: translate3d(0, 0%, 0);
+  }
+  55% {
+    transform: translate3d(0, -10%, 0);
+  }
+  60% {
+    transform: translate3d(0, -20%, 0);
+  }
+  65% {
+    transform: translate3d(0, -30%, 0);
+  }
+  70% {
+    transform: translate3d(0, -40%, 0);
+  }
+  75% {
+    transform: translate3d(0, -50%, 0);
+  }
+  80% {
+    transform: translate3d(0, -60%, 0);
+  }
+  85% {
+    transform: translate3d(0, -70%, 0);
+  }
+  90% {
+    transform: translate3d(0, -80%, 0);
+  }
+  95% {
+    transform: translate3d(0, -90%, 0);
+  }
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+  5% {
+    transform: translate3d(0, -90%, 0);
+  }
+  10% {
+    transform: translate3d(0, -80%, 0);
+  }
+  15% {
+    transform: translate3d(0, -70%, 0);
+  }
+  20% {
+    transform: translate3d(0, -60%, 0);
+  }
+  25% {
+    transform: translate3d(0, -50%, 0);
+  }
+  30% {
+    transform: translate3d(0, -40%, 0);
+  }
+  35% {
+    transform: translate3d(0, -30%, 0);
+  }
+  40% {
+    transform: translate3d(0, -20%, 0);
+  }
+  45% {
+    transform: translate3d(0, -10%, 0);
+  }
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+  55% {
+    transform: translate3d(0, 10%, 0);
+  }
+  60% {
+    transform: translate3d(0, 20%, 0);
+  }
+  65% {
+    transform: translate3d(0, 30%, 0);
+  }
+  70% {
+    transform: translate3d(0, 40%, 0);
+  }
+  75% {
+    transform: translate3d(0, 50%, 0);
+  }
+  80% {
+    transform: translate3d(0, 60%, 0);
+  }
+  85% {
+    transform: translate3d(0, 70%, 0);
+  }
+  90% {
+    transform: translate3d(0, 80%, 0);
+  }
+  95% {
+    transform: translate3d(0, 90%, 0);
+  }
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}

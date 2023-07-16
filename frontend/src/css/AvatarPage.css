@@ -1,0 +1,193 @@
+.avatar-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #4B5683;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.start-game-btn {
+    color: #4B5683;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #F7DA86;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 15px 25px 15px 25px;
+    margin-bottom: 20px;
+}
+
+.start-game-btn:disabled {
+    background-color: #bdbbbb;
+    color: #696565;
+    cursor: not-allowed;
+}
+
+.bubbles-page {
+    display: flex;
+    z-index: 1;
+}
+
+/* ------------ AVATAR PAGE CONTENT ---------- */
+.avatar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;   
+}
+
+/* --- HEADINGS ---- */
+.heading-title {
+    text-align: center;
+    font-size: 50px;
+    color: #F3DA91;
+    padding: 0;
+    margin-block-end: 0;
+}
+
+.heading-subtitle {
+    color: white;
+    padding: 0;
+    margin-block-start: 10px;
+    margin-block-end: 20px;
+}
+
+.nickname-input {
+    height: 35px;
+    width: 100%;
+    background-color: #FFFFFF;
+    text-align: center;
+    border-radius: 20px;
+    color: #000000;
+}
+
+/* --- AVATAR SELECTION ---- */
+.avatar-content {
+    margin: 30px 0 10px 0;
+    padding-top: 20px;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(2, 180px);
+    grid-template-columns: repeat(4, 180px);
+}
+
+.avatar-content .avatar-circles {
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-circles .default-avatar-img-btn {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border-width: 8px;
+    border-color: #FFFFFF;
+}
+
+.avatar-circles .selected-avatar-img-btn {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border-width: 8px;
+    border-color: #F7DA86;
+}
+
+.default-avatar-img-btn:disabled {
+    background-color: #bdbbbb;
+    border-color: #bdbbbb;
+    cursor: not-allowed;
+}
+
+.avatar-images {
+    width: 80px;
+    align-self: center;
+
+}
+
+.default-avatar-img-btn:hover {
+    border-color: #F7DA86;
+}
+
+.test1{
+
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    z-index: 1;    
+    bottom: 0%;
+    left:0%;
+    right:0%;
+    transform: translateY(0%);
+
+}
+
+
+/* ------------ SMALLER SCREEN ---------- */
+@media screen and (max-width: 1000px) {
+
+    .heading-title {
+        font-size: 30px;
+    }
+    
+    .heading-subtitle {
+        font-size: 20px;
+        margin-block-start: 6px;
+        margin-block-end: 12px;
+    }
+    
+    .nickname-input {
+        height: 21px;
+        font-size: 10px;
+    }
+
+    .start-game-btn {
+        font-size: 12px;
+        padding: 9px 15px 9px 15px;
+    }
+    
+    .start-game-btn:disabled {
+        background-color: #bdbbbb;
+        color: #696565;
+        cursor: not-allowed;
+    }
+    
+    .avatar-content {
+        margin: 0;
+        grid-template-rows: repeat(2, 100px);
+        grid-template-columns: repeat(4, 100px);
+    }
+    
+    .avatar-content .avatar-circles {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .avatar-circles .default-avatar-img-btn,
+    .avatar-circles .selected-avatar-img-btn {
+        width: 90px;
+        height: 90px;
+        border-width: 4px;
+    }
+    
+    .default-avatar-img-btn:disabled {
+        background-color: #bdbbbb;
+        border-color: #bdbbbb;
+        cursor: not-allowed;
+    }
+    
+    .avatar-images {
+        width: 48px;
+        align-self: center;
+    }
+    
+    .default-avatar-img-btn:hover {
+        border-color: #F7DA86;
+    }
+}
