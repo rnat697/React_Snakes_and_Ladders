@@ -27,6 +27,8 @@ Make sure you have the latest version of `node.js` and `npm` installed. This can
 
 website: https://nodejs.org/.
 
+Add ```DB_URL=mongodb+srv://indigo:impalas@cluster0.eesez2g.mongodb.net/?retryWrites=true&w=majority``` to the `.env file` in backend folder. 
+
 Open up two terminals, one for launching the front and one for the backend.
 1. Backend terminal
 
