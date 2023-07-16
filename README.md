@@ -1,4 +1,7 @@
-# SE 750 Project Implementation  
+# Seaweed and Bubbles Game
+A MERN stack implementation of an ocean-themed Snakes and Ladder game for the web for a university group project.
+
+# SE750 Project Implementation  
 
 Snakes and ladder is a recreation of the original board game implemented into a web-based version. The thematic used is ocean and with snakes being replaced as seaweed and ladders with bubbles.
 
