@@ -1,8 +1,12 @@
 # Seaweed and Bubbles Game
 A MERN stack implementation of an ocean-themed Snakes and Ladder game for the web for a university group project.
-<img src="/readme_assets/SB_home.png" width="50%" height="50%"><img src="/readme_assets/SB_player_sel.png" width="50%" height="50%">
-<img src="/readme_assets/SB_sel avatar.png" width="50%" height="50%"><img src="/readme_assets/SB_game.png" width="50%" height="50%">
-<img src="/readme_assets/SB_winner.png" width="50%" height="50%">
+
+
+<img src="/readme_assets/SB_home.png" width="40%" height="40%"><img src="/readme_assets/SB_player_sel.png" width="40%" height="40%">
+<img src="/readme_assets/SB_sel avatar.png" width="40%" height="40%"><img src="/readme_assets/SB_game.png" width="40%" height="40%">
+<img src="/readme_assets/SB_winner.png" width="40%" height="40%">
+
+
 # SE750 Project Implementation  
 
 Snakes and ladder is a recreation of the original board game implemented into a web-based version. The thematic used is ocean and with snakes being replaced as seaweed and ladders with bubbles.
