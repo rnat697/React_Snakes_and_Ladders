@@ -1,0 +1,98 @@
+.home-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center top;
+    overflow: hidden;
+    background-color: #4B5683;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+}
+.title{
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+/*Wave Layers*/
+.layer1{
+
+    width: 120%;
+    min-height:200px;
+    transform: translateY(10%);
+    z-index: 3;
+}
+.layer2{
+
+    width: 120%;
+    min-height:200px;
+    transform: translateY(-50%);
+    z-index: 4;
+}
+.layer3{
+    width: 120%;
+    min-height:200px;
+    transform: translateY(-120%);
+    z-index: 5;
+}
+.layer4{
+
+    width: 120%;
+    min-height:200px;
+    transform: translateY(-200%);
+    z-index: 5;
+}
+.layer5{
+
+    width: 120%;
+    height: 400px;
+    transform: translateY(-350%);
+    z-index: 6;
+
+}
+.layer6{
+
+    width: 120%;
+    height: 400px;
+    transform: translateY(-410%);
+    z-index: 6;
+
+}
+
+
+.home-page h1 {
+    position: relative;
+    align-self: center;
+    color: white;
+    font-size: 80px;
+    margin-block-start: 140px;
+    margin-block-end: 50px;
+}
+
+.button-start {
+    position: relative;
+    display: inline-block; /* Change display property to inline-block */
+    align-self: center;
+    height: 75px;
+    width: 150px;
+    border-radius: 50px;
+    font-size: 30px;
+    background-color: white;
+    border: 1px solid #4B5683;
+    color: #4B5683;
+    z-index: 2;
+
+}
+
+
+.button-start:hover {
+    background-color: #A5ACCD;
+    border: 1px solid #4B5683;
+    color: white;
+}
